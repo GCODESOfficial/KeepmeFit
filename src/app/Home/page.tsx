@@ -284,7 +284,7 @@ const Home = () => {
             className="min-w-[250px] lg:min-w-[300px] shadow-md rounded-xl py-14 px-6 flex flex-col items-center justify-center text-center text-xl font-semibold drop-shadow-[0_-5px_5px_rgba(0,0,0,0.08)]"
             >
               {/* Icon Wrapper */}
-              <div className="w-16 h-16 p-10 flex items-center justify-center rounded-full bg-[#CBEA7B] mb-3">
+              <div className="w-16 h-16 p-4 flex items-center justify-center rounded-full bg-[#CBEA7B] mb-3">
                 <Image
                   src={service.icon}
                   alt={service.title}
