@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import PricingTable from "../components/PricingTable";
+import PricingTableMobile from "../components/PricingTableMobile";
 
 const Page = () => {
 	const router = useRouter();
-
 
 	const services = [
 		{
@@ -54,37 +54,66 @@ const Page = () => {
 	];
 
 	return (
-		<div className="flex flex-col items-center pb-40">
-			<div className="w-10/12 mt-20 flex flex-col items-center relative space-y-5 text-[#333333]">
+		<div className="flex flex-col items-center lg:pb-40 pb-5">
+			<div className="lg:w-10/12 w-11/12 lg:mt-20 flex flex-col items-center relative space-y-5 text-[#333333]">
 				{/* Logo Div Positioned on Top */}
-				<div className="flex items-center gap-2.5 absolute top-28 z-10">
-					<Image src="/images/Log.svg" alt="Logo" width={60} height={32} />
-					<h1 className="font-[Nohemi-SemiBold] text-[#016324] text-lg">
-						Keepme Fit
-					</h1>
+					<div className="w-full flex hidden lg:block flex-col items-center">
+						<div className="flex items-center gap-2.5 absolute top-28 z-10">
+							<Image src="/images/Log.svg" alt="Logo" width={60} height={32} />
+							<h1 className="font-[Nohemi-SemiBold] text-[#016324] text-lg">
+								Keepme Fit
+							</h1>
+						</div>
+
+						{/* Background Image */}
+						<Image
+							src="/images/Abstract Design.svg"
+							alt="Background"
+							width={500}
+							height={500}
+							className="object-contain z-0"
+						/>
+
+						<div className="text-center w-[80%] flex flex-col -mt-5 gap-8">
+							<h1 className="font-bold text-2xl text-[#262626]">
+								Your Journey to Health and Wellness
+							</h1>
+							<h1 className="text-xs">
+								At Keepmefit, we believe in providing a personalized and
+								comprehensive approach to help you achieve your health and
+								wellness goals. Our &quot;How it Works&quot; process is designed
+								to guide you through each step of your journey, ensuring that
+								you receive the support, knowledge, and tools you need to
+								succeed. Here&apos;s a detailed breakdown of our process:
+							</h1>
+						</div>
 				</div>
 
-				{/* Background Image */}
-				<Image
-					src="/images/Abstract Design.svg"
-					alt="Background"
-					width={500}
-					height={500}
-					className="object-contain z-0"
-				/>
+				<div className="bg-[#f6fbe9] lg:hidden pb-10 rounded-xl mt-10 border-[#E5F5BD] border flex flex-col items-center relative text-[#333333]">
+					{/* Logo Div Positioned on Top */}
 
-				<div className="text-center w-[80%] flex flex-col -mt-5 gap-8">
-					<h1 className="font-bold text-2xl text-[#262626]">
-						Your Journey to Health and Wellness
-					</h1>
-					<h1 className="text-xs">
-						At Keepmefit, we believe in providing a personalized and
-						comprehensive approach to help you achieve your health and wellness
-						goals. Our &quot;How it Works&quot; process is designed to guide you
-						through each step of your journey, ensuring that you receive the
-						support, knowledge, and tools you need to succeed. Here&apos;s a
-						detailed breakdown of our process:
-					</h1>
+					{/* Background Image */}
+					<Image
+						src="/images/Abstract Design.svg"
+						alt="Background"
+						width={500}
+						height={500}
+						className="object-contain z-0"
+					/>
+
+					<div className="text-center w-[90%] flex flex-col  -mt-36 z-20 gap-8">
+						<h1 className="font-bold text-2xl text-[#262626]">
+							Your Journey to Health and Wellness
+						</h1>
+						<h1 className="text-xs">
+							At Keepmefit, we believe in providing a personalized and
+							comprehensive approach to help you achieve your health and
+							wellness goals. Our &quot;How it Works&quot; process is designed
+							to guide you through each step of your journey, ensuring that you
+							receive the support, knowledge, and tools you need to succeed.
+							Here&apos;s a detailed breakdown of our process:
+						</h1>
+					</div>
 				</div>
 
 				<Image
@@ -92,10 +121,10 @@ const Page = () => {
 					alt="Background"
 					width={500}
 					height={500}
-					className="w-11/12"
+					className="lg:w-11/12 rounded-2xl lg:rounded-none mt-20 lg:mt-0"
 				/>
 
-				<div className="text-center w-[57%] py-10 flex flex-col gap-3">
+				<div className="text-center lg:w-[57%] py-10 flex flex-col gap-3 mt-14 lg:mt-0">
 					<h1 className="font-bold text-3xl text-[#262626]">How It Works</h1>
 					<h1 className="text-xs">
 						We provide a step-by-step guide on how to get started on your
@@ -107,7 +136,7 @@ const Page = () => {
 				</div>
 			</div>
 
-			<div className="grid grid-cols-1 w-10/12 md:grid-cols-2 gap-24 px-10 py-16 font-[Urbanist]">
+			<div className="grid grid-cols-1 lg:w-10/12 md:grid-cols-2 gap-24 lg:px-10 px-5 py-16 font-[Urbanist]">
 				{services.map((service, index) => (
 					<div key={index} className="relative">
 						{/* Number in Background */}
@@ -116,7 +145,7 @@ const Page = () => {
 						</span>
 
 						{/* Service Card (Above the Number) */}
-						<div className="relative  z-10 flex flex-col space-x-5 space-y-5 p-10 px-9 bg-[#DEF6D5] rounded-xl">
+						<div className="relative z-10 flex flex-col space-x-5 space-y-5 p-10 lg:px-9 px-5 bg-[#DEF6D5] rounded-xl">
 							{/* Icon */}
 							<div className="flex items-center gap-3">
 								<div className="w-10 p-2  bg-[#CBEA7B] flex items-center justify-center rounded-lg">
@@ -133,7 +162,9 @@ const Page = () => {
 
 							{/* Text Content */}
 							<div>
-								<p className="text-[10px] mt-1">{service.description}</p>
+								<p className="lg:text-[10px] text-xs mt-1">
+									{service.description}
+								</p>
 							</div>
 						</div>
 					</div>
@@ -141,25 +172,27 @@ const Page = () => {
 			</div>
 
 			<div className="mx-auto pt-16 grid justify-center ">
-				<h2 className="text-center text-2xl font-bold text-gray-700 mb-10">
+				<h2 className="text-center text-2xl font-bold text-[#4C4C4D] mb-10">
 					SUBSCRIPTION PACKAGES
 				</h2>
 			</div>
 
-			
-			<div className="-mt-20 w-full flex justify-center">
-  <PricingTable />
-</div>
+			<div className="-mt-20 w-full flex justify-center hidden">
+				<PricingTable />
+			</div>
 
+			<div className="-mt-20 flex justify-center lg:hidden">
+				<PricingTableMobile />
+			</div>
 
-			<div className="bg-[#F6FBE9] border-[#E5F5BD] border-[0.5px] py-10 px-10 relative rounded mt-14 flex justify-between w-9/12">
-				<div className="absolute bottom-0 right-0">
+			<div className="bg-[#F6FBE9] border-[#E5F5BD] border-[0.5px] py-10 px-10 relative rounded mt-14 flex lg:flex-row flex-col justify-between text-center w-11/12 lg:w-9/12">
+				<div className="absolute bottom-0 right-0 ">
 					<Image
 						src="/images/services absract 1.svg"
 						alt=""
 						width={70}
 						height={70}
-						className=""
+						className="lg:w-[70px] lg:h-[70px] w-[50px] h-[50px]"
 					/>
 				</div>
 				<div className="absolute top-0 left-0">
@@ -172,7 +205,7 @@ const Page = () => {
 					/>
 				</div>
 				<div className=" flex flex-col gap-3">
-					<h1 className="font-bold text-lg text-[#262626] w-10/12">
+					<h1 className="font-bold text-lg text-[#262626] lg:w-10/12">
 						Are you ready to embark on a transformative journey towards better
 						health and wellness?
 					</h1>

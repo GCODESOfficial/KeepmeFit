@@ -22,12 +22,12 @@ export default function ContactPage() {
 	};
 
 	return (
-		<div className="bg-[#f6fbe9] text-[#333333] font-[Urbanist] mt-10 py-20 w-10/12 rounded-xl mx-auto border-[#E5F5BD] border relative">
+		<div className="bg-[#f6fbe9] text-[#333333] font-[Urbanist] mt-10 lg:py-20 py-10 w-11/12 lg:w-10/12 rounded-xl mx-auto border-[#E5F5BD] border relative">
 			<div className="flex justify-center items-center">
 				<div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap- w-10/12">
 					{/* Contact Form */}
 					<form onSubmit={handleSubmit} className="space-y-7  text-sm">
-						<div className="flex  gap-5">
+						<div className="lg:flex space-y-7 gap-5">
 							<div className="w-full">
 								<label className="block font-semibold">Full Name</label>
 								<input
@@ -91,7 +91,7 @@ export default function ContactPage() {
 					</form>
 
 					{/* Map & Social Links */}
-					<div className="flex flex-col items-end space-y-4">
+					<div className="flex flex-col lg:items-end items-center space-y-4 mt-10 lg:mt-0">
 						<iframe
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10000!2d7.845!3d4.987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTQuMjjCsDI1JzA3LjciTiA3wrA1MCc1Mi4wIkU!5e0!3m2!1sen!2sng!4v1649254788123"
 							width={400}
@@ -102,6 +102,7 @@ export default function ContactPage() {
 							}}
 							allowFullScreen
 							loading="lazy"
+							className="w-full h-[250px]"
 						></iframe>
 
 						<div className="flex space-x-4 mt-4">

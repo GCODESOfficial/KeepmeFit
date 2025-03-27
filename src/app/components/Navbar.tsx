@@ -31,24 +31,42 @@ const Navbar = () => {
 		<nav className="fixed top-0 w-full z-30 flex flex-col justify-center items-center font-[ProductSans]">
 			{/* Top Banner */}
 			<div className="bg-[#13271A] w-full h-[60px] lg:h-[87px] flex items-center justify-center overflow-hidden px-4">
-				<div className="flex items-center gap-2 lg:gap-4 text-center">
-					<h1 className="text-white text-xs lg:text-xl">
-						Get Early Access to Expert Guidance and Tailored Nutrition.
-					</h1>
-					<button
-						className="hidden cursor-pointer lg:block bg-[#A7FD58] text-black text-sm lg:text-base px-4 lg:px-6 py-1 lg:py-2 rounded-full font-semibold"
+				<div className="hidden lg:block">
+					<div className="flex items-center gap-4 text-center">
+						<h1 className="text-white text-xl">
+							Get Early Access to Expert Guidance and Tailored Nutrition.
+						</h1>
+						<button
+							className="cursor-pointer bg-[#A7FD58] text-black text-base px-6 py-2 rounded-full font-semibold"
+							onClick={() => router.push("/waitlist")}
+						>
+							Join Waitlist
+						</button>
+					</div>
+				</div>
+
+				<div className="flex items-center gap-2 text-center lg:hidden">
+					<h1
+						className="text-white text-xs"
 						onClick={() => router.push("/waitlist")}
 					>
-						Join Waitlist
-					</button>
+						Get Early Access to Expert Guidance and Tailored Nutrition.
+					</h1>
 				</div>
 			</div>
 
 			{/* Navbar */}
-			<div className={`w-11/12 mx-auto p-3 lg:p-4 rounded-bl-2xl rounded-br-2xl bg-white ${isWaitlistPage ? "w-full" : ""}`}>
+			<div
+				className={`w-full lg:w-11/12 mx-auto p-3 lg:p-4 lg:rounded-bl-2xl lg:rounded-br-2xl bg-white ${
+					isWaitlistPage ? "w-full" : ""
+				}`}
+			>
 				<div className="container mx-auto px-4 flex justify-between items-center h-full">
 					{/* Logo */}
-					<div className="flex items-center gap-2 cursor-pointer" onClick={() => router.push("/")}>
+					<div
+						className="flex items-center gap-2 cursor-pointer"
+						onClick={() => router.push("/")}
+					>
 						<Image
 							src="/images/Log.svg"
 							alt="Logo"
@@ -56,7 +74,9 @@ const Navbar = () => {
 							height={24}
 							className="lg:w-[60px] lg:h-[32px]"
 						/>
-						<h1 className="font-[Nohemi-SemiBold] text-[#016324] text-sm lg:text-lg">Keepme Fit</h1>
+						<h1 className="font-[Nohemi-SemiBold] text-[#016324] text-sm lg:text-lg">
+							Keepme Fit
+						</h1>
 					</div>
 
 					{/* Desktop Navigation */}
@@ -65,9 +85,13 @@ const Navbar = () => {
 							<div className="hidden lg:flex space-x-16 text-gray-700 ">
 								{menuItems.map((item) => (
 									<div key={item.name} className="text-sm">
-										<a 
-											href={item.link} 
-											className={`transition ${pathname === item.link ? "text-green-500" : "hover:text-green-500"}`}
+										<a
+											href={item.link}
+											className={`transition ${
+												pathname === item.link
+													? "text-green-500"
+													: "hover:text-green-500"
+											}`}
 										>
 											{item.name}
 										</a>
@@ -78,7 +102,7 @@ const Navbar = () => {
 							{/* Buttons & Mobile Menu Toggle */}
 							<div className="flex items-center space-x-3 lg:space-x-4">
 								<div className="hidden text-sm lg:flex space-x-2">
-									<button 
+									<button
 										className="px-3 py-1 lg:px-4 lg:py-2 text-[#44B84F] font-bold border border-[#5ABA01] rounded-full"
 										onClick={() => router.push("/contact")}
 									>
@@ -90,7 +114,10 @@ const Navbar = () => {
 								</div>
 
 								{/* Mobile Menu Button */}
-								<button className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+								<button
+									className="lg:hidden"
+									onClick={() => setMenuOpen(!menuOpen)}
+								>
 									{menuOpen ? <X size={28} /> : <Menu size={28} />}
 								</button>
 							</div>
@@ -101,7 +128,7 @@ const Navbar = () => {
 				{/* Mobile Menu */}
 				{!isWaitlistPage && (
 					<div
-						className={`fixed top-0 left-0 w-full h-screen bg-black bg-opacity-50 transition-all ease-in-out duration-300 ${
+						className={`fixed top-0 left-0 w-full h-screen bg-[#13271A] bg-opacity-50 transition-all ease-in-out duration-300 ${
 							menuOpen ? "block" : "hidden"
 						}`}
 						onClick={() => setMenuOpen(false)}
@@ -121,13 +148,27 @@ const Navbar = () => {
 									key={item.name}
 									href={item.link}
 									className={`block text-gray-700 text-base ${
-										pathname === item.link ? "text-green-500" : "hover:text-green-500"
+										pathname === item.link
+											? "text-green-500"
+											: "hover:text-green-500"
 									}`}
 									onClick={() => setMenuOpen(false)}
 								>
 									{item.name}
 								</a>
 							))}
+
+							<div className=" text-sm lg:flex space-x-2">
+								<button
+									className="px-3 py-1 text-[#44B84F] font-bold border border-[#5ABA01] rounded"
+									onClick={() => router.push("/contact")}
+								>
+									Contact Us
+								</button>
+								<button className="px-4 py-1 bg-[#A7FD58] text-black font-bold rounded">
+									Launch App
+								</button>
+							</div>
 						</div>
 					</div>
 				)}

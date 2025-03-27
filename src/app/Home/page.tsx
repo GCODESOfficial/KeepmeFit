@@ -29,12 +29,30 @@ const Home = () => {
 
 
 	const services = [
-		"Nutritional Coaching",
-		"Health Product Recommendation",
-		"Health Consultation",
-		"Corporate Wellness Consultation",
-		"Recipe Development",
-		"Meal Plan Development",
+		{
+			title: "Nutritional Coaching",
+			icon: "/images/services1.svg", // Replace with actual icons if needed
+		},
+		{
+			title: "Health Product Recommendation",
+			icon: "/images/services2.svg",
+		},
+		{
+			title: "Health Consultation",
+			icon: "/images/services3.svg",
+		},
+		{
+			title: "Corporate Wellness Consultation",
+			icon: "/images/services4.svg",
+		},
+		{
+			title: "Recipe Development",
+			icon: "/images/services5.svg",
+		},
+		{
+			title: "Meal Plan Development",
+			icon: "/images/services6.svg",
+		},
 	];
 
 	const blogs = [
@@ -95,7 +113,7 @@ const Home = () => {
 	return (
 		<div className="flex justify-center overflow-hidden items-center flex-col lg:mt-64 font-[Urbanist]">
 			<div className="lg:flex lg:relative lg:w-full lg:h-96 grid justify-center items-center">
-				<div className="relative w-[358px] h-[398px] lg:w-[450px] lg:h-[300px] drop-shadow-[0_5px_5px_rgba(0,0,0,0.08)] lg:absolute lg:right-28 mx-auto">
+				<div className="relative w-11/12 h-[298px] lg:w-[450px] lg:h-[300px] drop-shadow-[0_5px_5px_rgba(0,0,0,0.08)] lg:absolute lg:right-28 mx-auto">
 					<Image
 						src="/images/Homepage.png"
 						alt="Logo"
@@ -150,7 +168,7 @@ const Home = () => {
 						</div>
 					</div>
 
-					<div className="p-10 text-center lg:text-left lg:p-0 lg:flex lg:flex-col lg:gap-5">
+					<div className=" p-5  text-center lg:text-left lg:p-0 lg:flex lg:flex-col lg:gap-5">
 						<div className="border-b-2 border-[#CBEA7B] pt-2 pb-2 hidden lg:block w-[60%]">
 							<h1 className="text-[16px] font-semibold">
 								Transform Your ❤️ Health with Keepmefit
@@ -159,12 +177,12 @@ const Home = () => {
 
 						<h1
 							className="text-transparent bg-clip-text 
-                    bg-gradient-to-r from-[#39b54a] to-[#ABD27B] text-2xl lg:text-4xl font-[Nohemi-ExtraBold]"
+                    bg-gradient-to-r from-[#39b54a] to-[#ABD27B] text-xl lg:text-4xl font-[Nohemi-ExtraBold]"
 						>
 							Find Your Perfect Health Balance with Our Care
 						</h1>
 
-						<p className="text-[14px] lg:text-sm font-[Urbanist]">
+						<p className="text-[12px] pt-5 lg:pt-0 lg:text-sm font-[Urbanist] ">
 							Welcome to Keepmefit, your partner in achieving optimal health.
 							Our experts are here to guide you through professional health
 							consultation, customized meal plans, and quality health products
@@ -175,7 +193,26 @@ const Home = () => {
 				</div>
 			</div>
 
-			<div className="pt-40 lg:h-[700px] w-full ">
+
+			
+			<div className="flex items-center pt-10 gap-2 lg:gap-4 text-center pb-14 lg:hidden">
+					<button
+						className=" cursor-pointer bg-[#CBEA7B] text-black text-sm lg:text-base px-4 py-3 rounded font-semibold"
+						
+					>
+						Join Waitlist
+					</button>
+
+					<button
+						className=" cursor-pointer bg-[#E5F5BD] text-black text-sm lg:text-base px-4 py-3 rounded font-semibold"
+						
+					>
+						Book a Consultation
+					</button>
+				</div>
+
+
+			<div className="lg:pt-40 lg:h-[700px] w-full ">
 				<div
 					className=" w-full lg:px-28 py-16 flex justify-center items-center lg:gap-18 gap-3 relative"
 					style={{
@@ -187,10 +224,10 @@ const Home = () => {
 						alt="Logo"
 						width={550}
 						height={400}
-						className="lg:h-[400px] lg:w-[550px] h-44 w-44"
+						className="lg:h-[400px] lg:w-[550px] h-20 w-20"
 					/>
 
-					<div className="text-white flex flex-col gap-10 lg:w-[39%] w-[43%]">
+					<div className="text-white flex flex-col gap-10 lg:w-[39%] w-[65%]">
 						<h1 className="font-bold lg:text-5xl">Who We Are</h1>
 						<span className="">
 							At KeepMeFit, we believe that health is a lifestyle, not a
@@ -247,15 +284,15 @@ const Home = () => {
             className="min-w-[250px] lg:min-w-[300px] shadow-md rounded-xl py-14 px-6 flex flex-col items-center justify-center text-center text-xl font-semibold drop-shadow-[0_-5px_5px_rgba(0,0,0,0.08)]"
             >
               {/* Icon Wrapper */}
-              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-[#CBEA7B] mb-3">
+              <div className="w-16 h-16 p-10 flex items-center justify-center rounded-full bg-[#CBEA7B] mb-3">
                 <Image
-                  src="/images/icon.svg"
-                  alt="Service Icon"
-                  width={30}
-                  height={30}
+                  src={service.icon}
+                  alt={service.title}
+                  width={20}
+                  height={20}
                 />
               </div>
-              {service}
+              {service.title}
             </div>
           ))}
         </OwlCarousel>
@@ -267,18 +304,18 @@ const Home = () => {
 				{services.map((service, index) => (
 					 <div
 					 key={index}
-				  className=" shadow-md bg-white rounded-xl w-60 flex flex-col items-center justify-center py-3 px-8 text-xl font-semibold drop-shadow-[0_-5px_5px_rgba(0,0,0,0.08)]"
+				  className=" shadow-md bg-white rounded-xl w-60 flex flex-col items-center justify-center py-3 px-8 font-semibold drop-shadow-[0_-5px_5px_rgba(0,0,0,0.08)]"
 				  >
 					{/* Icon Wrapper */}
 					<div className="w-16 h-16 flex items-center justify-center rounded-full bg-[#CBEA7B] mb-3">
 					  <Image
-						src="/images/icon.svg"
-						alt="Service Icon"
+						src={service.icon}
+						alt={service.title}
 						width={20}
 						height={20}
 					  />
 					</div>
-					{service}
+					{service.title}
 				  </div>
 				))}
 			</div>
@@ -292,7 +329,7 @@ const Home = () => {
 				</button>
 			</div>
 
-			<div className="text-center w-[60%] flex flex-col gap-3">
+			<div className="text-center lg:w-[60%] w-[95%] flex flex-col gap-3">
 				<h1 className="pt-20 font-bold text-2xl text-[#262626]">Our Blogs</h1>
 				<h1 className="text-sm">
 					Our blog is a treasure trove of informative and engaging articles
@@ -351,7 +388,7 @@ const Home = () => {
 				</button>
 			</div>
 
-			<div className="text-center w-[60%] flex flex-col gap-3">
+			<div className="text-center lg:w-[60%] flex flex-col gap-3">
 				<h1 className="pt-20 font-bold text-2xl text-[#262626]">
 					Our Products
 				</h1>
@@ -361,11 +398,11 @@ const Home = () => {
 				</h1>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-3 justify-between gap-6 px-6 py-14 ">
+			<div className="grid grid-cols-1 md:grid-cols-3 lg:justify-between justify-center items-center gap-6 px-6 py-14 ">
 				{boxes.map((box, index) => (
 					<div
 						key={index}
-						className="w-[335px] h-[330px] flex flex-col items-center overflow-hidden"
+						className="lg:w-[335px] h-[330px] flex flex-col justify-center overflow-hidden"
 					>
 						{/* Image */}
 						<div className="w-full h-[80%] ">
@@ -374,7 +411,7 @@ const Home = () => {
 								alt={box.title}
 								width={250}
 								height={240}
-								className="w-full h-full object-cover rounded-xl "
+								className="lg:w-full lg:h-full object-cover rounded-xl "
 							/>
 						</div>
 
@@ -392,7 +429,7 @@ const Home = () => {
 				</button>
 			</div>
 
-			<div className="text-center w-[60%] flex flex-col gap-3">
+			<div className="text-center lg:w-[60%] flex flex-col gap-3">
 				<h1 className="pt-20 font-bold text-2xl text-[#262626]">
 					Our Testimonials
 				</h1>
@@ -402,11 +439,11 @@ const Home = () => {
 				</h1>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-6 overflow-x-auto mt-14 px-4">
+			<div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-6 mt-14 px-4">
 				{testimonials.map((testimonial, index) => (
 					<div
 						key={index}
-						className=" rounded-lg shadow-lg w-[350px] border-2 h-60 pt-6 relative border-[#F6FBE9] flex flex-col gap-6"
+						className=" rounded-lg shadow-lg lg:w-[350px] border-2 h-60 pt-6 relative border-[#F6FBE9] flex flex-col gap-6"
 					>
 						<Image
 							src="/images/qoute.svg"
@@ -439,7 +476,7 @@ const Home = () => {
 			</div>
 
 			<div className="w-full">
-				<div className="bg-[#016324] w-full h-[415px] mt-24 relative">
+				<div className="bg-[#016324] w-full lg:h-[415px] h-[430px] mt-24 relative">
 					<Image
 						src="/images/community.svg"
 						alt="community"
@@ -458,7 +495,7 @@ const Home = () => {
 						</h1>
 
                         <div>
-				<button className="lg:px-6 px-4 py-3 text-sm lg:text-base text-center bg-[#A7FD58] text-black font-bold rounded-md transition">
+				<button className="lg:px-6 px-4 text-sm lg:text-base text-center bg-[#A7FD58] text-black font-bold rounded-md transition">
                 Join Our Telegram
 				</button>
 			</div>

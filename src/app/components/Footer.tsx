@@ -121,7 +121,7 @@ const Footer = () => {
 					))}
 				</div>
 
-				<p className="text-gray-400 lg:hidden"> Copyright KeepmeFit</p>
+				<p className="text-white lg:hidden"> {new Date().getFullYear()} Keepmefit. All rights reserved.</p>
 
 				<div className="flex-col space-y-8 hidden lg:block">
 					<div className="flex flex-col space-y-5">
@@ -137,7 +137,8 @@ const Footer = () => {
 							Send
 						</button>
 					</div>
-					<p className="text-gray-400 lg:hidden">Copyright KeepmeFit {new Date().getFullYear()}</p>
+
+		
 				</div>
 			</div>
 		</div>

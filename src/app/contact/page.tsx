@@ -21,7 +21,7 @@ const Page = () => {
 	];
 	return (
 		<div className="flex flex-col items-center pb-40">
-			<div className="bg-[#f6fbe9] w-10/12 h-[600px] rounded-xl mt-20 border-[#E5F5BD] border flex flex-col items-center relative text-[#333333]">
+			<div className="bg-[#f6fbe9] w-10/12 hidden lg:block h-[600px] rounded-xl mt-20 border-[#E5F5BD] border flex flex-col items-center relative text-[#333333]">
 				{/* Logo Div Positioned on Top */}
 				<div className="flex items-center gap-2.5 absolute top-28 z-10">
 					<Image src="/images/Log.svg" alt="Logo" width={60} height={32} />
@@ -69,16 +69,62 @@ const Page = () => {
 				</div>
 			</div>
 
+
+			<div className="bg-[#f6fbe9] lg:hidden pb-10 rounded-xl h-[520px] w-11/12 mt-10 border-[#E5F5BD] border flex flex-col items-center relative text-[#333333]">
+					{/* Logo Div Positioned on Top */}
+
+					{/* Background Image */}
+					<Image
+						src="/images/Abstract Design.svg"
+						alt="Background"
+						width={500}
+						height={500}
+						className="object-contain z-0"
+					/>
+
+					<div className="text-center w-[80%] flex flex-col  -mt-36 z-20 gap-8">
+						<h1 className="font-bold text-2xl text-[#262626]">
+						Contact Us
+						</h1>
+						<h1 className="text-xs">
+						We value your feedback, questions, and concerns at Nutritionist. Our
+						dedicated team is here to assist you and provide the support you
+						need on your nutritional journey. Please don&apos;t hesitate to
+						reach out to us using any of the following contact methods
+						</h1>
+					</div>
+
+					<div className="bg-[#5ABA01] py-5 rounded-b-xl absolute bottom-0 grid justify-center items-center gap-4 w-full mx-auto text-xs">
+					{contacts.map((contact, index) => (
+						<div
+							key={index}
+							className="bg-[#f6fbe9] border-[0.5px] border-[#2C5446] py-4 px-28 w-full rounded-lg flex flex-col justify-center items-center gap-4 "
+						>
+							<Image
+								src={contact.icon}
+								alt={contact.info}
+								width={15}
+								height={15}
+								className=""
+							/>
+
+							<h1>{contact.info}</h1>
+						</div>
+					))}
+				</div>
+				</div>
+
+
 			<ContactPage />
 
-			<div className="bg-[#F6FBE9] border-[#E5F5BD] border-[0.5px] py-10 px-10 relative rounded mt-32 flex justify-between w-10/12">
-				<div className="absolute bottom-0 right-0">
+			<div className="bg-[#F6FBE9] border-[#E5F5BD] border-[0.5px] py-10 px-10 relative rounded lg:mt-14 mt-20  flex lg:flex-row flex-col justify-between text-center w-11/12 lg:w-9/12">
+				<div className="absolute bottom-0 right-0 ">
 					<Image
 						src="/images/services absract 1.svg"
 						alt=""
 						width={70}
 						height={70}
-						className=""
+						className="lg:w-[70px] lg:h-[70px] w-[50px] h-[50px]"
 					/>
 				</div>
 				<div className="absolute top-0 left-0">
@@ -91,7 +137,7 @@ const Page = () => {
 					/>
 				</div>
 				<div className=" flex flex-col gap-3">
-					<h1 className="font-bold text-lg text-[#262626] w-10/12">
+					<h1 className="font-bold text-lg text-[#262626] lg:w-10/12">
 						Are you ready to embark on a transformative journey towards better
 						health and wellness?
 					</h1>
