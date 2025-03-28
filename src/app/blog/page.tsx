@@ -89,11 +89,9 @@ const Page = () => {
 
 	return (
 		<div className="flex flex-col items-center lg:pb-40 pb-20 overflow-hidden">
-			<div className="w-full hidden lg:block">
-			<div className="bg-[#f6fbe9] lg:w-10/12 h-[480px] rounded-xl mt-20 border-[#E5F5BD] border flex flex-col items-center relative text-[#333333]">
+			<div className="bg-[#f6fbe9] lg:w-10/12 hidden h-[480px] rounded-xl mt-20 border-[#E5F5BD] border lg:flex flex-col items-center relative text-[#333333]">
 				{/* Logo Div Positioned on Top */}
-				
-				
+
 				<div className="flex items-center gap-2.5 absolute top-28 z-10">
 					<Image src="/images/Log.svg" alt="Logo" width={60} height={32} />
 					<h1 className="font-[Nohemi-SemiBold] text-[#016324] text-lg">
@@ -123,8 +121,6 @@ const Page = () => {
 					</h1>
 				</div>
 
-				
-
 				<div className="bg-[#5ABA01] rounded-b-xl absolute bottom-0 flex justify-between items-center w-full mx-auto text-xs px-10 py-5">
 					{tips.map((tip, index) => (
 						<div
@@ -140,25 +136,22 @@ const Page = () => {
 					))}
 				</div>
 			</div>
-			</div>
 
 			<div className=" lg:hidden pb-10 rounded-xl w-11/12 mt-10 h-[350px] border-[#E5F5BD] border flex flex-col items-center relative text-[#333333]">
-					{/* Logo Div Positioned on Top */}
+				{/* Logo Div Positioned on Top */}
 
-					{/* Background Image */}
-					<Image
-						src="/images/Abstract Design.svg"
-						alt="Background"
-						width={500}
-						height={500}
-						className="object-contain z-0"
-					/>
+				{/* Background Image */}
+				<Image
+					src="/images/Abstract Design.svg"
+					alt="Background"
+					width={500}
+					height={500}
+					className="object-contain z-0"
+				/>
 
-					<div className="text-center w-[90%] flex flex-col  -mt-36 z-20 gap-8">
-						<h1 className="font-bold text-2xl text-[#262626]">
-						Our Blogs
-						</h1>
-						<h1 className="text-xs">
+				<div className="text-center w-[90%] flex flex-col  -mt-36 z-20 gap-8">
+					<h1 className="font-bold text-2xl text-[#262626]">Our Blogs</h1>
+					<h1 className="text-xs">
 						Welcome to the Blog section of Nutritionist, your trusted source for
 						insightful articles, tips, and expert advice on nutrition and
 						wellness. Here, we strive to provide you with engaging and
@@ -166,25 +159,24 @@ const Page = () => {
 						informed decisions about your health. Explore our blog to discover a
 						wealth of resources that cover a wide range of topics related to
 						nutrition, fitness, and overall well-being.
-						</h1>
-					</div>
-
-					<div className="bg-[#5ABA01] rounded-b-xl absolute bottom-0 flex justify-between items-center w-full mx-auto text-xs px-10 py-5">
-    {tips.slice(0, 3).map((tip, index) => (
-        <div
-            key={index}
-            className={`text-center text-white ${
-                tip === "All"
-                    ? "border border-white flex justify-center items-center rounded w-8 h-8"
-                    : ""
-            }`}
-        >
-            {tip}
-        </div>
-    ))}
-</div>
-
+					</h1>
 				</div>
+
+				<div className="bg-[#5ABA01] rounded-b-xl absolute bottom-0 flex justify-between items-center w-full mx-auto text-xs px-10 py-5">
+					{tips.slice(0, 3).map((tip, index) => (
+						<div
+							key={index}
+							className={`text-center text-white ${
+								tip === "All"
+									? "border border-white flex justify-center items-center rounded w-8 h-8"
+									: ""
+							}`}
+						>
+							{tip}
+						</div>
+					))}
+				</div>
+			</div>
 
 			<div className="bg-[#f6fbe9] font-[Urbanist] mt-10 pt-7 w-10/12 rounded-xl mx-auto border-[#E5F5BD] border relative hidden lg:block ">
 				<div className="absolute -12 top-0 left-1/2 transform -translate-x-1/2 h-full border-[0.01px] border-[#E5F5BD] "></div>
@@ -239,38 +231,37 @@ const Page = () => {
 			</div>
 
 			<div className="bg-[#f6fbe9] font-[Urbanist] lg:hidden mt-10 pt-7 w-11/12 rounded-xl mx-auto border-[#E5F5BD] border relative">
-    <div className="flex flex-col gap-6 pb-10">
-        {Losstips.map((tip, index) => (
-            <div key={index} className="bg-[#f6fbe9] px-5 pt-5 rounded-lg">
-                <div className="font-semibold text-xs md:text-sm inline-block border-b-2 p-2 border-[#CBEA7B]">
-                    {tip.category}
-                </div>
-                <Image
-                    src={tip.image}
-                    alt={tip.title}
-                    width={400}
-                    height={140}
-                    className="w-9/12 transform translate-x-4/12 h-32 md:h-40 object-cover rounded-md mt-5"
-                />
-                <div className="font-semibold text-xs md:text-sm mt-5 w-full">
-                    {tip.title}
-                </div>
-                <div className="flex flex-col md:flex-row md:items-center mt-2">
-                    <div className="text-[10px] md:text-xs w-full md:w-8/12">
-                        {tip.description}
-                    </div>
-                    <button
-                        className="mt-3 px-4 py-2 bg-[#A7FD58] text-black text-xs rounded transition font-semibold"
-                        onClick={() => router.push(`/blog/${index}`)}
-                    >
-                        Read More
-                    </button>
-                </div>
-            </div>
-        ))}
-    </div>
-</div>
-
+				<div className="flex flex-col gap-6 pb-10">
+					{Losstips.map((tip, index) => (
+						<div key={index} className="bg-[#f6fbe9] px-5 pt-5 rounded-lg">
+							<div className="font-semibold text-xs md:text-sm inline-block border-b-2 p-2 border-[#CBEA7B]">
+								{tip.category}
+							</div>
+							<Image
+								src={tip.image}
+								alt={tip.title}
+								width={400}
+								height={140}
+								className="w-9/12 transform translate-x-4/12 h-32 md:h-40 object-cover rounded-md mt-5"
+							/>
+							<div className="font-semibold text-xs md:text-sm mt-5 w-full">
+								{tip.title}
+							</div>
+							<div className="flex flex-col md:flex-row md:items-center mt-2">
+								<div className="text-[10px] md:text-xs w-full md:w-8/12">
+									{tip.description}
+								</div>
+								<button
+									className="mt-3 px-4 py-2 bg-[#A7FD58] text-black text-xs rounded transition font-semibold"
+									onClick={() => router.push(`/blog/${index}`)}
+								>
+									Read More
+								</button>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
 		</div>
 	);
 };

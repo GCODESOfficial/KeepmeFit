@@ -44,8 +44,8 @@ const Page = () => {
 
 	return (
 		<div className="flex flex-col items-center lg:pb-20 pb-10">
-			<div className="w-full hidden lg:block">
-			<div className="w-10/12 mt-20 flex flex-col items-center relative space-y-5 text-[#333333]">
+			
+			<div className="w-10/12 mt-20 lg:flex hidden flex-col items-center relative space-y-5 text-[#333333]">
 				{/* Logo Div Positioned on Top */}
 				<div className="flex items-center gap-2.5 absolute top-28 z-10">
 					<Image src="/images/Log.svg" alt="Logo" width={60} height={32} />
@@ -74,7 +74,6 @@ const Page = () => {
 					</h1>
 				</div>
 			</div>
-			</div>
 
 			
 			<div className="bg-[#f6fbe9] lg:hidden w-11/12 pb-10 rounded-xl mt-10 border-[#E5F5BD] border flex flex-col items-center relative text-[#333333]">
@@ -89,7 +88,7 @@ const Page = () => {
 						className="object-contain z-0"
 					/>
 
-					<div className="text-center w-[90%] flex flex-col  -mt-36 z-20 gap-8">
+					<div className="text-center w-[90%] flex flex-col -mt-24 z-20 gap-8">
 						<h1 className="font-bold text-2xl text-[#262626]">
 						Our Pricing
 						</h1>
@@ -201,7 +200,7 @@ const Page = () => {
 				</button>
 			</div>
 
-			<div className="-mt-20 w-full flex justify-center hidden">
+			<div className="-mt-20 w-full lg:flex justify-center hidden">
 				<PricingTable />
 			</div>
 
@@ -211,7 +210,7 @@ const Page = () => {
 
 			<section className="bg-[#F7FBEF] py-10 lg:px-20 w-11/12">
 				<div className="flex justify-center items-center">
-					<div className="text-center lg:w-8/12 flex flex-col gap-4">
+					<div className="text-center lg:w-8/12 flex flex-col gap-4 mx-auto">
 						<h1 className="font-bold text-2xl text-[#262626]">FAQ</h1>
 						<h1 className="text-sm w-11/12">
 							We address commonly asked questions and provide comprehensive

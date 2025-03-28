@@ -57,7 +57,7 @@ const Page = () => {
 		<div className="flex flex-col items-center lg:pb-40 pb-5">
 			<div className="lg:w-10/12 w-11/12 lg:mt-20 flex flex-col items-center relative space-y-5 text-[#333333]">
 				{/* Logo Div Positioned on Top */}
-					<div className="w-full flex hidden lg:block flex-col items-center">
+					<div className="w-full lg:flex hidden flex-col items-center">
 						<div className="flex items-center gap-2.5 absolute top-28 z-10">
 							<Image src="/images/Log.svg" alt="Logo" width={60} height={32} />
 							<h1 className="font-[Nohemi-SemiBold] text-[#016324] text-lg">
@@ -101,7 +101,7 @@ const Page = () => {
 						className="object-contain z-0"
 					/>
 
-					<div className="text-center w-[90%] flex flex-col  -mt-36 z-20 gap-8">
+					<div className="text-center w-[90%] flex flex-col  -mt-24 z-20 gap-8">
 						<h1 className="font-bold text-2xl text-[#262626]">
 							Your Journey to Health and Wellness
 						</h1>
@@ -177,7 +177,7 @@ const Page = () => {
 				</h2>
 			</div>
 
-			<div className="-mt-20 w-full flex justify-center hidden">
+			<div className="-mt-20 w-full lg:flex justify-center hidden">
 				<PricingTable />
 			</div>
 
@@ -185,7 +185,7 @@ const Page = () => {
 				<PricingTableMobile />
 			</div>
 
-			<div className="bg-[#F6FBE9] border-[#E5F5BD] border-[0.5px] py-10 px-10 relative rounded mt-14 flex lg:flex-row flex-col justify-between text-center w-11/12 lg:w-9/12">
+			<div className="bg-[#F6FBE9] border-[#E5F5BD] border-[0.5px] py-10 lg:px-16 px-5 relative rounded mt-14 flex lg:flex-row flex-col justify-between text-center lg:text-left w-11/12 lg:w-9/12">
 				<div className="absolute bottom-0 right-0 ">
 					<Image
 						src="/images/services absract 1.svg"
@@ -216,7 +216,7 @@ const Page = () => {
 				</div>
 
 				<button
-					className="px-3 h-10 text-center mt-3 text-sm bg-[#A7FD58] text-black font-bold rounded-md transition"
+					className="lg:px-5 px-3 h-10 text-center mt-3 text-sm bg-[#A7FD58] text-black font-bold rounded-md transition"
 					onClick={() => router.push("/waitlist")}
 				>
 					Join Us Now

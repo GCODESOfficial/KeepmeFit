@@ -24,10 +24,10 @@ export default function ContactPage() {
 	return (
 		<div className="bg-[#f6fbe9] text-[#333333] font-[Urbanist] mt-10 lg:py-20 py-10 w-11/12 lg:w-10/12 rounded-xl mx-auto border-[#E5F5BD] border relative">
 			<div className="flex justify-center items-center">
-				<div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap- w-10/12">
+				<div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center lg:gap-5 w-10/12">
 					{/* Contact Form */}
 					<form onSubmit={handleSubmit} className="space-y-7  text-sm">
-						<div className="lg:flex space-y-7 gap-5">
+						<div className="lg:flex space-y-7 lg:space-y-0 gap-5">
 							<div className="w-full">
 								<label className="block font-semibold">Full Name</label>
 								<input
@@ -102,7 +102,7 @@ export default function ContactPage() {
 							}}
 							allowFullScreen
 							loading="lazy"
-							className="w-full h-[250px]"
+							className="w-full h-[250px] lg:w-[400px]"
 						></iframe>
 
 						<div className="flex space-x-4 mt-4">
@@ -124,7 +124,7 @@ export default function ContactPage() {
 							</a>
 							<a href="#" className="hover:opacity-75 p-3 rounded bg-[#5ABA01]">
 								<Image
-									src="/images/LinkedIn.svg"
+									src="/images/Linkedin.svg"
 									alt="LinkedIn"
 									width={20}
 									height={20}

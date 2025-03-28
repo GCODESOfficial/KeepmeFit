@@ -125,7 +125,7 @@ const Home = () => {
 
 				<div className="lg:absolute lg:left-28 lg:w-[39%] lg:h-full">
 					<div className="flex-col justify-center items-center flex text-base lg:absolute lg:bottom-4 lg:flex-row lg:gap-3">
-						<span className="flex w-[102px] lg:w-auto items-center -mt-12 lg:mt-0 p-2 lg:p-1 rounded-full bg-[#FAFDF2] border-[#CBEA7B] border-2 lg:border">
+						<span className="flex w-[102px] lg:w-auto items-center mt-10 lg:mt-0 p-2 lg:p-1 rounded-full bg-[#FAFDF2] border-[#CBEA7B] border-2 lg:border">
 							<Image
 								src="/images/Image (2).png"
 								alt="Logo"
@@ -177,7 +177,7 @@ const Home = () => {
 
 						<h1
 							className="text-transparent bg-clip-text 
-                    bg-gradient-to-r from-[#39b54a] to-[#ABD27B] text-xl lg:text-4xl font-[Nohemi-ExtraBold]"
+                    bg-gradient-to-r from-[#39b54a] to-[#ABD27B] text-2xl lg:text-4xl font-[Nohemi-ExtraBold]"
 						>
 							Find Your Perfect Health Balance with Our Care
 						</h1>
@@ -304,7 +304,7 @@ const Home = () => {
 				{services.map((service, index) => (
 					 <div
 					 key={index}
-				  className=" shadow-md bg-white rounded-xl w-60 flex flex-col items-center justify-center py-3 px-8 font-semibold drop-shadow-[0_-5px_5px_rgba(0,0,0,0.08)]"
+				  className=" shadow-md bg-white rounded-xl flex flex-col items-center justify-center py-3 px-8 font-semibold drop-shadow-[0_-5px_5px_rgba(0,0,0,0.08)]"
 				  >
 					{/* Icon Wrapper */}
 					<div className="w-16 h-16 flex items-center justify-center rounded-full bg-[#CBEA7B] mb-3">
@@ -329,7 +329,7 @@ const Home = () => {
 				</button>
 			</div>
 
-			<div className="text-center lg:w-[60%] w-[95%] flex flex-col gap-3">
+			<div className="text-center lg:w-[60%] w-10/12 flex flex-col gap-3">
 				<h1 className="pt-20 font-bold text-2xl text-[#262626]">Our Blogs</h1>
 				<h1 className="text-sm">
 					Our blog is a treasure trove of informative and engaging articles
@@ -388,7 +388,7 @@ const Home = () => {
 				</button>
 			</div>
 
-			<div className="text-center lg:w-[60%] flex flex-col gap-3">
+			<div className="text-centerw-[60%] hidden lg:flex flex-col gap-3">
 				<h1 className="pt-20 font-bold text-2xl text-[#262626]">
 					Our Products
 				</h1>
@@ -398,7 +398,7 @@ const Home = () => {
 				</h1>
 			</div>
 
-			<div className="grid grid-cols-1 md:grid-cols-3 lg:justify-between justify-center items-center gap-6 px-6 py-14 ">
+			<div className="lg:grid grid-cols-1 md:grid-cols-3 hidden lg:justify-between justify-center items-center gap-6 px-6 py-14 ">
 				{boxes.map((box, index) => (
 					<div
 						key={index}
@@ -423,13 +423,13 @@ const Home = () => {
 				))}
 			</div>
 
-			<div className="">
+			<div className="hidden lg:block">
 				<button className="px-6 py-3 text-center bg-[#A7FD58] text-black font-bold rounded-full transition">
 					View More
 				</button>
 			</div>
 
-			<div className="text-center lg:w-[60%] flex flex-col gap-3">
+			<div className="text-center lg:w-[60%] w-10/12 flex flex-col gap-3">
 				<h1 className="pt-20 font-bold text-2xl text-[#262626]">
 					Our Testimonials
 				</h1>
@@ -482,10 +482,10 @@ const Home = () => {
 						alt="community"
 						width={400}
 						height={400}
-						className="absolute lg:right-30 -right-16 -bottom-20 scale-[0.7] lg:bottom-0 lg:scale-100"
+						className="absolute lg:right-30 -right-20 -bottom-20 scale-[0.7] lg:bottom-0 lg:scale-100"
 					/>
 
-					<div className="lg:w-[28%] w-[36%] flex flex-col gap-5 text-white absolute lg:top-10 lg:left-40 left-5">
+					<div className="lg:w-[28%] w-[40%] flex flex-col gap-5 text-white absolute lg:top-10 lg:left-40 left-8">
 						<h1 className="lg:pt-20 pt-14 font-bold lg:text-4xl text-2xl">
 							Join Our Community on Telegram
 						</h1>
@@ -495,7 +495,7 @@ const Home = () => {
 						</h1>
 
                         <div>
-				<button className="lg:px-6 px-4 text-sm lg:text-base text-center bg-[#A7FD58] text-black font-bold rounded-md transition">
+				<button className="lg:px-6 px-4 py-3 text-sm lg:text-base text-center bg-[#A7FD58] text-black font-bold rounded-md transition">
                 Join Our Telegram
 				</button>
 			</div>

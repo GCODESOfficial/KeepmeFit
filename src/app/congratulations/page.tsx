@@ -28,7 +28,7 @@ const Congratulations = () => {
 
 			{/* Centered Content */}
 			<div className="z-20 flex flex-col justify-center items-center text-center">
-				<h1 className="text-black text-6xl md:text-3xl font-semibold font-[Nohemi]">
+				<h1 className="text-black lg:text-6xl md:text-3xl font-semibold font-[Nohemi]">
 					Congratulations <br /> You&apos;re Now In
 				</h1>
 				<button

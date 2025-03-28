@@ -21,7 +21,7 @@ const Page = () => {
 	];
 	return (
 		<div className="flex flex-col items-center pb-40">
-			<div className="bg-[#f6fbe9] w-10/12 hidden lg:block h-[600px] rounded-xl mt-20 border-[#E5F5BD] border flex flex-col items-center relative text-[#333333]">
+			<div className="bg-[#f6fbe9] w-10/12 hidden h-[600px] rounded-xl mt-20 border-[#E5F5BD] border lg:flex flex-col items-center relative text-[#333333]">
 				{/* Logo Div Positioned on Top */}
 				<div className="flex items-center gap-2.5 absolute top-28 z-10">
 					<Image src="/images/Log.svg" alt="Logo" width={60} height={32} />
@@ -82,7 +82,7 @@ const Page = () => {
 						className="object-contain z-0"
 					/>
 
-					<div className="text-center w-[80%] flex flex-col  -mt-36 z-20 gap-8">
+					<div className="text-center w-[80%] flex flex-col -mt-14 z-20 gap-8">
 						<h1 className="font-bold text-2xl text-[#262626]">
 						Contact Us
 						</h1>
@@ -98,7 +98,7 @@ const Page = () => {
 					{contacts.map((contact, index) => (
 						<div
 							key={index}
-							className="bg-[#f6fbe9] border-[0.5px] border-[#2C5446] py-4 px-28 w-full rounded-lg flex flex-col justify-center items-center gap-4 "
+							className="bg-[#f6fbe9] border-[0.5px] border-[#2C5446] py-4 px-20 w-full rounded-lg flex flex-col justify-center items-center gap-4 "
 						>
 							<Image
 								src={contact.icon}
@@ -117,7 +117,7 @@ const Page = () => {
 
 			<ContactPage />
 
-			<div className="bg-[#F6FBE9] border-[#E5F5BD] border-[0.5px] py-10 px-10 relative rounded lg:mt-14 mt-20  flex lg:flex-row flex-col justify-between text-center w-11/12 lg:w-9/12">
+			<div className="bg-[#F6FBE9] border-[#E5F5BD] border-[0.5px] py-10 lg:px-16 px-5 relative rounded lg:mt-14 mt-20  flex lg:flex-row flex-col justify-between text-center lg:text-left w-11/12 lg:w-10/12">
 				<div className="absolute bottom-0 right-0 ">
 					<Image
 						src="/images/services absract 1.svg"
@@ -148,7 +148,7 @@ const Page = () => {
 				</div>
 
 				<button
-					className="px-3 h-10 text-center mt-3 text-sm bg-[#A7FD58] text-black font-bold rounded-md transition"
+					className="lg:px-5 px-3 h-10 text-center mt-3 text-sm bg-[#A7FD58] text-black font-bold rounded-md transition"
 					onClick={() => router.push("/waitlist")}
 				>
 					Join Us Now
