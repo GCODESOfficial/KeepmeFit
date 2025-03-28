@@ -208,11 +208,11 @@ const Page = () => {
 				<PricingTableMobile />
 			</div>
 
-			<section className="bg-[#F7FBEF] py-10 lg:px-20 w-11/12">
+			<section className=" py-10 lg:px-20 w-11/12">
 				<div className="flex justify-center items-center">
-					<div className="text-center lg:w-8/12 flex flex-col gap-4 mx-auto">
+					<div className="text-center lg:w-8/12 flex flex-col gap-4">
 						<h1 className="font-bold text-2xl text-[#262626]">FAQ</h1>
-						<h1 className="text-sm w-11/12">
+						<h1 className="text-sm w-11/12 mx-auto">
 							We address commonly asked questions and provide comprehensive
 							answers to help you navigate your way through your health and
 							wellness journey.
@@ -220,18 +220,18 @@ const Page = () => {
 					</div>
 				</div>
 				<div className="lg:flex mt-14 gap-10 ">
-					<div className="lg:w-8/12 mx-auto bg-[#F6FBE9] border-[0.5px] border-[#E5F5BD] text-sm rounded lg:p-10 p-5 ">
+					<div className="lg:w-8/12 mx-auto bg-[#F6FBE9] border-[0.5px] border-[#E5F5BD] text-sm rounded lg:p-10 p-4 ">
 						{faqs.map((faq, index) => (
 							<div
 								key={index}
 								className="border-b border-[#E5F5BD] last:border-none"
 							>
 								<button
-									className="lg:w-full w-11/12 text-left flex justify-between font-medium items-center py-4 text-gray-800 focus:outline-none"
+									className="lg:w-full w-10/12 text-left flex justify-between  font-medium items-center py-4 relative text-gray-800 focus:outline-none"
 									onClick={() => toggleFAQ(index)}
 								>
 									{faq.question}
-									<div className="w-7 h-7 bg-[#016324] rounded flex justify-center items-center p-1.5">
+									<div className="w-7 h-7 bg-[#016324] rounded flex justify-center items-center p-1.5 absolute -right-10 lg:right-0">
 										{openIndex === index ? (
 											<XIcon className="text-white text-xs " />
 										) : (

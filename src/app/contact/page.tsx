@@ -82,7 +82,7 @@ const Page = () => {
 						className="object-contain z-0"
 					/>
 
-					<div className="text-center w-[80%] flex flex-col -mt-14 z-20 gap-8">
+					<div className="text-center w-[80%] flex flex-col -mt-24 z-20 gap-8">
 						<h1 className="font-bold text-2xl text-[#262626]">
 						Contact Us
 						</h1>
@@ -94,11 +94,11 @@ const Page = () => {
 						</h1>
 					</div>
 
-					<div className="bg-[#5ABA01] py-5 rounded-b-xl absolute bottom-0 grid justify-center items-center gap-4 w-full mx-auto text-xs">
+					<div className="bg-[#5ABA01] py-5 rounded-b-xl absolute h-[300px] bottom-0 grid justify-center items-center gap-4 w-full mx-auto text-xs">
 					{contacts.map((contact, index) => (
 						<div
 							key={index}
-							className="bg-[#f6fbe9] border-[0.5px] border-[#2C5446] py-4 px-20 w-full rounded-lg flex flex-col justify-center items-center gap-4 "
+							className="bg-[#f6fbe9] border-[0.5px] border-[#2C5446] py-2 px-14 rounded-lg flex flex-col justify-center items-center gap-4 "
 						>
 							<Image
 								src={contact.icon}
@@ -117,7 +117,7 @@ const Page = () => {
 
 			<ContactPage />
 
-			<div className="bg-[#F6FBE9] border-[#E5F5BD] border-[0.5px] py-10 lg:px-16 px-5 relative rounded lg:mt-14 mt-20  flex lg:flex-row flex-col justify-between text-center lg:text-left w-11/12 lg:w-10/12">
+			<div className="bg-[#F6FBE9] border-[#E5F5BD] border-[0.5px] py-12 lg:px-16 px-5 relative rounded lg:mt-14 mt-20  flex lg:flex-row flex-col justify-between text-center lg:text-left w-11/12 lg:w-10/12">
 				<div className="absolute bottom-0 right-0 ">
 					<Image
 						src="/images/services absract 1.svg"

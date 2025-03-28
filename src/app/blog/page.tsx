@@ -149,7 +149,7 @@ const Page = () => {
 					className="object-contain z-0"
 				/>
 
-				<div className="text-center w-[90%] flex flex-col  -mt-36 z-20 gap-8">
+				<div className="text-center w-[90%] flex flex-col -mt-24 z-20 gap-8">
 					<h1 className="font-bold text-2xl text-[#262626]">Our Blogs</h1>
 					<h1 className="text-xs">
 						Welcome to the Blog section of Nutritionist, your trusted source for
@@ -162,7 +162,7 @@ const Page = () => {
 					</h1>
 				</div>
 
-				<div className="bg-[#5ABA01] rounded-b-xl absolute bottom-0 flex justify-between items-center w-full mx-auto text-xs px-10 py-5">
+				<div className="bg-[#5ABA01] rounded-b-xl absolute bottom-0 flex justify-between items-center w-full mx-auto text-xs px-5 py-5">
 					{tips.slice(0, 3).map((tip, index) => (
 						<div
 							key={index}

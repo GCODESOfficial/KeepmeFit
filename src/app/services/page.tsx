@@ -185,7 +185,7 @@ const Page = () => {
 				<PricingTableMobile />
 			</div>
 
-			<div className="bg-[#F6FBE9] border-[#E5F5BD] border-[0.5px] py-10 lg:px-16 px-5 relative rounded mt-14 flex lg:flex-row flex-col justify-between text-center lg:text-left w-11/12 lg:w-9/12">
+			<div className="bg-[#F6FBE9] border-[#E5F5BD] border-[0.5px] py-12 lg:px-16 px-5 relative rounded mt-14 flex lg:flex-row flex-col justify-between text-center lg:text-left w-11/12 lg:w-9/12">
 				<div className="absolute bottom-0 right-0 ">
 					<Image
 						src="/images/services absract 1.svg"
