@@ -125,7 +125,7 @@ const Home = () => {
 
 				<div className="lg:absolute lg:left-28 lg:w-[39%] lg:h-full">
 					<div className="flex-col justify-center items-center flex text-base lg:absolute lg:bottom-4 lg:flex-row lg:gap-3">
-						<span className="flex w-[102px] lg:w-auto items-center -mt-5 lg:mt-0 p-2 lg:p-1 rounded-full bg-[#FAFDF2] border-[#CBEA7B] border-2 lg:border">
+						<span className="flex w-[102px] lg:w-auto items-center mt-10 lg:mt-0 p-2 lg:p-1 rounded-full bg-[#FAFDF2] border-[#CBEA7B] border-2 lg:border">
 							<Image
 								src="/images/Image (2).png"
 								alt="Logo"
@@ -388,7 +388,7 @@ const Home = () => {
 				</button>
 			</div>
 
-			<div className="text-centerw-[60%] hidden lg:flex flex-col gap-3">
+			<div className="text-center w-[60%] hidden lg:flex flex-col gap-3">
 				<h1 className="pt-20 font-bold text-2xl text-[#262626]">
 					Our Products
 				</h1>
