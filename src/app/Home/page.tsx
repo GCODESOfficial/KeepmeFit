@@ -398,7 +398,7 @@ const Home = () => {
 				</h1>
 			</div>
 
-			<div className="lg:grid grid-cols-1 md:grid-cols-3 hidden lg:justify-between justify-center items-center gap-6 px-6 py-14 ">
+			<div className="lg:grid grid-cols-3 hidden justify-between items-center gap-14 px-6 py-14 ">
 				{boxes.map((box, index) => (
 					<div
 						key={index}
@@ -416,7 +416,7 @@ const Home = () => {
 						</div>
 
 						{/* Title */}
-						<h2 className="text-xl font-semibold p-3 text-[#262626]">
+						<h2 className="text-xl text-center font-semibold p-3 text-[#262626]">
 							{box.title}
 						</h2>
 					</div>
